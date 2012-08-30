@@ -14,11 +14,19 @@ h1{
 	margin-bottom: 0px;
 }
 
+h2{
+	color: #234A70;
+	text-align: left;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+
 body{
 	font-family: Eurostile, Arial, sans-serif;
 	color: #000;
 	background-color: #9FABAD;
-	text-align: center;
+	
 	height: 850px;
 }
 
@@ -29,12 +37,18 @@ li{
 	margin-left: -30px;
 }
 
+li.browse{
+	line-height: .95em;
+	margin-left: 10px;
+}
+
 div{
-	margin-top: 10px;
+	margin-top: 0px;
 }
 
 section{
-	margin-top: 50px;
+	text-align: center;
+	margin-top: 0px;
 }
 
 fieldset{
@@ -42,7 +56,7 @@ fieldset{
 }
 
 legend{
-	color: #185EB4;
+	color: #234A70;
 	font-size: 20px;
 	text-align: left;
 	font-weight: bold;
@@ -54,7 +68,7 @@ label{
 
 nav{
 	text-align: center;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 a:link{
@@ -88,6 +102,10 @@ a{
 
 img{
 	margin-bottom: 10px;
+}
+
+#home{
+	color: #F3F7FB;
 }
 
 #items + #items{
@@ -132,6 +150,11 @@ img{
 }
 
 #cta{
+	border-radius: 10px;
+	width: 300px;
+	background-color: #F3F7FB;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	text-decoration: none;
 	font-family: Eurostile, Arial Black, Arial, sans-serif;
 	font-weight: bold;
@@ -149,8 +172,7 @@ img{
 
 #cta:hover{
 	color: maroon;
-	font-size: 32px;
-}
+	}
 
 #cta:active{
 	color: navy;
