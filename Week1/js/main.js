@@ -6,7 +6,7 @@
 window.addEventListener("DOMContentLoaded", function(){
 
 	// get Element shortcut
-	function $(x){
+	function ge(x){
 		var element = document.getElementById(x);
 		return element;
 	};
@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	// create "select" form element
 	function makeCats(){
 		var formTag = document.getElementsByTagName("form"),
-			selectLi = $("select"),
+			selectLi = ge("select"),
 			makeSelect = document.createElement("select");
 			makeSelect.setAttribute("id", "genre");
 		for (var i=0, j=gameGenres.length; i<j; i++){
@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	// get checkbox values
 	function getPlatformValues(){                      
-		var checkboxes = $("mainform").platforms;
+		var checkboxes = ge("mainform").platforms;
 		for(i=0, j=checkboxes.length; i<j; i++){
 			if(checkboxes[i].checked){
 				var checkedValue = checkboxes[i].value;
@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	// get radio value
 	function getRecommendationValue(){                      
-		var radios = $("mainform").recommendation;
+		var radios = ge("mainform").recommendation;
 		for (i=0, j=radios.length; i<j; i++){
 			if (radios[i].checked){
 				recommendationValue = radios[i].value;
@@ -51,17 +51,17 @@ window.addEventListener("DOMContentLoaded", function(){
 	function toggleControls(n){
 		switch(n){
 			case "on":
-				$("mainform").style.display = "none";
-				$("clear").style.display = "inline";
-				$("display").style.display = "none";
-				$("addNew").style.display = "inline";
+				ge("mainform").style.display = "none";
+				ge("clear").style.display = "inline";
+				ge("display").style.display = "none";
+				ge("addNew").style.display = "inline";
 				break;
 			case "off":
-				$("mainform").style.display = "block";
-				$("clear").style.display = "inline";
-				$("display").style.display = "inline";
-				$("addNew").style.display = "none";
-				$("items").style.display = "none";
+				ge("mainform").style.display = "block";
+				ge("clear").style.display = "inline";
+				ge("display").style.display = "inline";
+				ge("addNew").style.display = "none";
+				ge("items").style.display = "none";
 				break;
 			default:
 				return false;
@@ -78,13 +78,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		getPlatformValues();
 		getRecommendationValue();
 		var item = {};
-			item.gname = ["Game Name: ", $("gname").value];
-			item.genre = ["Genre: ", $("genre").value];
-			item.releaseDate = ["Release Date: ", $("releasedate").value];
+			item.gname = ["Game Name: ", ge("gname").value];
+			item.genre = ["Genre: ", ge("genre").value];
+			item.releaseDate = ["Release Date: ", ge("releasedate").value];
 			item.platforms = ["Platforms:", platformValues];
-			item.quality = ["Quality: ", $("quality").value];
+			item.quality = ["Quality: ", ge("quality").value];
 			item.recommendation = ["Recommendation: ", recommendationValue];
-			item.notes = ["Notes: ", $("notes").value];
+			item.notes = ["Notes: ", ge("notes").value];
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Rating Saved!");		
 	};
@@ -111,8 +111,8 @@ window.addEventListener("DOMContentLoaded", function(){
 		toggleControls("on");
 
 		//clear any error indicators from the form
-		var getGname = $("gname");
-		var getGenre = $("genre");
+		var getGname = ge("gname");
+		var getGenre = ge("genre");
 		errMsg.innerHTML = "";
 		getGname.style.border = "1px solid black";
 		getGenre.style.border = "1px solid black";
@@ -133,7 +133,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		makeList.setAttribute("id", "itemslist");
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
-		$("items").style.display = "block"; 
+		ge("items").style.display = "block"; 
 		for(i=0, j=localStorage.length; i<j; i++){
 			var makeLi = document.createElement("li");
 			var linksLi = document.createElement("li");
@@ -186,12 +186,12 @@ window.addEventListener("DOMContentLoaded", function(){
 		toggleControls("off");
 
 		//populate form
-		$("gname").value = item.gname[1];
-		$("genre").value = item.genre[1];
-		$("releasedate").value = item.releaseDate[1];
+		ge("gname").value = item.gname[1];
+		ge("genre").value = item.genre[1];
+		ge("releasedate").value = item.releaseDate[1];
 
 		// find which checkboxes should be checked, and check them
-		var checkboxes = $("mainform").platforms;
+		var checkboxes = ge("mainform").platforms;
 		var selectedPlatforms = item.platforms[1];
 		for(var n=0, m=checkboxes.length; n<m; n++){
 			for(var x=0, y=selectedPlatforms.length; x<y; x++){
@@ -200,10 +200,10 @@ window.addEventListener("DOMContentLoaded", function(){
 				};
 			};
 		};
-		$("quality").value = item.quality[1];	
+		ge("quality").value = item.quality[1];	
 
 		// find which radio should be checked and check it
-		var radios = $("mainform").recommendation;
+		var radios = ge("mainform").recommendation;
 		for(var i=0, j=radios.length; i<j; i++){
 			if(radios[i].value == "Buy" && item.recommendation[1] == "Buy"){
 				radios[i].setAttribute("checked", "checked");
@@ -214,14 +214,14 @@ window.addEventListener("DOMContentLoaded", function(){
 			};
 		};
 
-		$("notes").value = item.notes[1]; 
+		ge("notes").value = item.notes[1]; 
 
 		//remove initial listener from save button
 		save.removeEventListener("click", saveData);
 
 		//change submit button to edit button
-		$("submit").value = "Edit Game Entry";
-		var editSubmit = $("submit");
+		ge("submit").value = "Edit Game Entry";
+		var editSubmit = ge("submit");
 		editSubmit.addEventListener("click", validate);
 
 		//save key value
@@ -241,8 +241,8 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	function validate(e){
 		//define elements I want to check
-		var getGname = $("gname");
-		var getGenre = $("genre");
+		var getGname = ge("gname");
+		var getGenre = ge("genre");
 
 		//reset error messages
 		errMsg.innerHTML = "";
@@ -300,15 +300,15 @@ window.addEventListener("DOMContentLoaded", function(){
 	var gameGenres = ["--Choose A Genre--","Action-Adventure", "Fighting", "FPS", "Platformer", "Puzzle", "RPG", "Simulation", "Sports", "Strategy"];
 	var platformValues = [];
 	var recommendationValue = "Recommendation?";
-	var errMsg = $("errors");
+	var errMsg = ge("errors");
 
 	makeCats(); //create and populate "genre" field
 
 	// set click events
-	var displayLink = $("display");
+	var displayLink = ge("display");
 	displayLink.addEventListener("click", getData);
-	var clearLink = $("clear");
+	var clearLink = ge("clear");
 	clearLink.addEventListener("click", clearData);
-	var save = $("submit");
+	var save = ge("submit");
 	save.addEventListener("click", validate);
 });
