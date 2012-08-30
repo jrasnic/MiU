@@ -1,3 +1,10 @@
+// JSON data
+// Justin Rasnic
+// MIU 1209
+// Project 1
+
+
+
 var json = {
 	"game1": {
 		"gname": ["Game Name: ", "Battlefield 3"],

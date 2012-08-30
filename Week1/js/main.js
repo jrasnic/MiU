@@ -1,6 +1,6 @@
 // Justin Rasnic
-// VFW 1208
-// Project 4
+// MIU 1209
+// Project 1
 
 // Delay JS until DOM is ready (all code must be inside this function)
 window.addEventListener("DOMContentLoaded", function(){
