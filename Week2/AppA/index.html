@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<!-- Justin Rasnic
+	 MIU 1209
+	 Project 1
+	 index.html -->
+
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="A web app that saves game ratings and keeps track of the games you own or want to buy!" />
+	<meta name="keywords" content="game, video game, games, video games, ratings" />
+	<meta name="robots" content="index, follow" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<meta http-equiv="cleartype" content="on" />
+	<title>Game Rating Library</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+<!-- 	<link href="css/styles.css" rel="stylesheet" type="text/css" />	
+ --></head>
+<body>
+	<div data-role="page" id="homepage">
+		<div data-role="header" data-position="fixed">
+			<h1><a href="index.html" id="home">Game Rater</a></h1>
+		</div>
+		<div data-role="content">
+			<div> </br>
+				<p>Create a library of game ratings!</p> 
+				<p>
+					<a href="additem.html" data-role="button" data-ajax="false">Do It Now!</a>
+				</p>
+			</div>
+			<!-- <div>
+				<h2>Search</h2>
+				<form action="" method="post" id="search form">
+					<input type="search" id="searchfield" />
+					<input type="submit" value="Go!" id="searchsubmit" />
+				</form>
+			</div> -->
+			<div>
+				<h2>Browse</h2></br>
+				<ul data-role="listview" data-filter="true">
+					<li class="browse"><a href="#action" data-ajax="false">Action-Adventure</a></li>
+					<li class="browse"><a href="#fighting" data-ajax="false">Fighting</a></li>
+					<li class="browse"><a href="#fps" data-ajax="false">FPS</a></li>
+					<li class="browse"><a href="#platformer" data-ajax="false">Platformer</a></li>
+					<li class="browse"><a href="#puzzle"data-ajax="false">Puzzle</a></li>
+					<li class="browse"><a href="#rpg" data-ajax="false">RPG</a></li>
+					<li class="browse"><a href="#simulation" data-ajax="false">Simulation</a></li>
+					<li class="browse"><a href="#sports" data-ajax="false">Sports</a></li>
+					<li class="browse"><a href="#strategy" data-ajax="false">Strategy</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-ajax="false" data-icon="home">Home</a></li>
+					<li><a href="additem.html" data-ajax="false" data-icon="plus">Add Game</a></li>
+					<li><a href="App B/index.html" data-ajax="false" data-icon="">App B</a></li>
+					<li><a href="https://jrasnic.github.com/MiU/Week2/AppA/index.html" data-ajax="false" data-icon="">gh Pages</a></li>
+				</ul>
+
+		</div>
+	</div>
+
+	<div data-role="page" id="action" data-add-back-btn="true" >
+		<div data-role="header" data-position="fixed">
+			<h1>Action-Adventure Games</h1>
+		</div>
+		<div data-role="content">
+			<p>Coming Soon</p>
+		</div>
+	</div>
+
+	<div data-role="page" data-add-back-btn="true" id="fighting">
+		<div data-role="header" data-position="fixed">
+			<h1>Fighting Games</h1>
+		</div>
+		<div data-role="content">
+			<p>Coming Soon</p>
+		</div>
+	</div>
+
+	<div data-role="page" data-add-back-btn="true" id="fps">
+		<div data-role="header" data-position="fixed">
+			<h1>FPS Games</h1>
+		</div>
+		<div data-role="content">
+			<p>Coming Soon</p>
+		</div>
+	</div>
+
+	<div data-role="page" data-add-back-btn="true" id="platformer">
+		<div data-role="header" data-position="fixed">
+			<h1>Platformer Games</h1>
+		</div>
+		<div data-role="content">
+			<p>Coming Soon</p>
+		</div>
+	</div>
+
+	<div data-role="page" data-add-back-btn="true" id="puzzle">
+		<div data-role="header" data-position="fixed">
+			<h1>Puzzle Games</h1>
+		</div>
+		<div data-role="content">
+			<p>Coming Soon</p>
+		</div>
+	</div>
+
+	<div data-role="page" data-add-back-btn="true" id="rpg">
+		<div data-role="header" data-position="fixed">
+			<h1>RPG Games</h1>
+		</div>
+		<div data-role="content">
+			<p>Coming Soon</p>
+		</div>
+	</div>
+
+	<div data-role="page" data-add-back-btn="true" id="simulation">
+		<div data-role="header" data-position="fixed">
+			<h1>Simulation</h1>
+		</div>
+		<div data-role="content">
+			<p>Coming Soon</p>
+		</div>
+	</div>
+
+	<div data-role="page" data-add-back-btn="true" id="sports">
+		<div data-role="header" data-position="fixed">
+			<h1>Sports Games</h1>
+		</div>
+		<div data-role="content">
+			<p>Coming Soon</p>
+		</div>
+	</div>
+
+	<div data-role="page" data-add-back-btn="true" id="strategy">
+		<div data-role="header" data-position="fixed">
+			<h1>Strategy</h1>
+		</div>
+		<div data-role="content">
+			<p>Coming Soon</p>
+		</div>
+	</div>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+</body>
+</html>
