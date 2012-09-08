@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<!-- Justin Rasnic
+	 MIU 1209
+	 Project 1
+	 index.html -->
+
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="A web app that saves game ratings and keeps track of the games you own or want to buy!" />
+	<meta name="keywords" content="game, video game, games, video games, ratings" />
+	<meta name="robots" content="index, follow" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<meta http-equiv="cleartype" content="on" />
+	<title>Game Rating Library</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link href="css/styles.css" rel="stylesheet" type="text/css" />	
+</head>
+<body>
+	<div data-role="page" id="homepage">
+		<div data-role="header" data-position="fixed">
+			<h1><a href="index.html" id="home">Game Rater</a></h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="additem.html" data-ajax="false" data-icon="plus">Add Game</a></li>
+					<li><a href="#display" data-ajax="false" data-icon="grid">My Games</a></li>
+					<li><a href="#clear" data-ajax="false" data-icon="delete">Clear All</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<div> <!-- CTA -->
+				<p>Create a library of game ratings!</p> 
+				<p>
+					<a href="additem.html" data-role="button" data-ajax="false">Do It Now!</a>
+				</p>
+			</div>
+			<div>
+				<h2>Search</h2>
+				<form action="" method="post" id="search form">
+					<input type="search" id="searchfield" />
+					<input type="submit" value="Go!" id="searchsubmit" />
+				</form>
+			</div>
+			<div>
+				<h2>Browse</h2
+				<ul>
+					<li class="browse"><a href="#">Action-Adventure</a></li>
+					<li class="browse"><a href="#">Fighting</a></li>
+					<li class="browse"><a href="#">FPS</a></li>
+					<li class="browse"><a href="#">Platformer</a></li>
+					<li class="browse"><a href="#">Puzzle</a></li>
+					<li class="browse"><a href="#">RPG</a></li>
+					<li class="browse"><a href="#">Simulation</a></li>
+					<li class="browse"><a href="#">Sports</a></li>
+					<li class="browse"><a href="#">Strategy</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-ajax="false" data-icon="home">Home</a></li>
+					<li><a href="App B/index.html" data-ajax="false" data-icon="">App B</a></li>
+					<li><a href="jrasnic.github.com/MIU/Week2/App A/index.html" data-ajax="false" data-icon="">gh Pages</a></li>
+				</ul>
+
+		</div>
+	</div>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+</body>
+</html>
