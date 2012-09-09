@@ -3,6 +3,17 @@ MIU 1209
 Project 1
 CSS styles*/
 
+p{
+	text-align: center;
+}
+
+#homepage .ui-grid-b div{
+	text-align: center;
+}
+
+li.browse{
+	height: 60px;
+}
 
 h1{
 	font-family: Eurostile, Arial Black, Arial, sans-serif;
