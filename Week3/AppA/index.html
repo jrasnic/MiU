@@ -18,6 +18,7 @@
 	<title>Game Rating Library</title>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
 	<link href="css/styles.css" rel="stylesheet" type="text/css" />	
+	<script type="text/javascript" src="js/lib/modernizr.custom.89414"></script>
 </head>
 <body>
 	<div data-role="page" id="homepage">
@@ -387,10 +388,12 @@
 
 		<div data-role="content">
 			<form action="" method="post" id="mainform">
+
 				<div data-role="fieldcontain">
 					<label for="gname">Game Name:</label>
 					<input type="text" name="gname" id="gname" />
 				</div>
+
 				<div data-role="fieldcontain">
 					<label for="genre">Genre:</label>
 					<select name="genre"id="genre" data-native-menu="false">
@@ -406,10 +409,12 @@
 						<option value="Strategy">Strategy</option>
 					</select>
 				</div>
+
 				<div data-role="fieldcontain">
 					<label for="releasedate">Release Date:</label>
 					<input type="date" name="releasedate" id="releasedate" />
 				</div>
+
 				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup">
 						<legend>What platform(s) is the game on?</legend>
@@ -429,15 +434,38 @@
 						<label for="android">Android</label>
 					</fieldset>
 				</div>
+
+				<div data-role="fieldcontain">
+					<label for="quality">How would you rate the quality of this game?</label>
+					<input type="range" name="quality" id="quality" value="50" min="0" max="100" />
+				</div>
+
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>Your recommendation:</legend>
+						<input type="radio" value="Buy" name="recommendation" id="buy" />
+						<label for="buy">Buy</label>
+						<input type="radio" value="Rent/Borrow" name="recommendation" id="rent" />
+						<label for="rent">Rent/Borrow</label>
+						<input type="radio" value="Skip" name="recommendation" id="skip" />
+						<label for="skip">Skip</label>
+					</fieldset>
+				</div>
 				
 				<div data-role="fieldcontain">
 					<label for ="notes">Notes:</label>
 					<textarea name="notes" id="notes"></textarea>
+				</div>
+
+				<div data-role="fieldcontain">
+					<input type="submit" value="Add Game" data-theme="b" /></br>
+					<input type="reset" value="Reset" data-theme="a" />
 				</div>
 			</form>
 		</div>
 	</div>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min"></script>
 </body>
 </html>
