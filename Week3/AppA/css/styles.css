@@ -1,7 +1,13 @@
 /* Justin Rasnic
 MIU 1209
-Project 1
+Project 3
 CSS styles*/
+
+label.error{
+	display: block;
+	margin: 10px 0px;
+	color: red;
+}
 
 p{
 	text-align: center;

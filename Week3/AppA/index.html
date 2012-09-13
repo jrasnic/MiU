@@ -2,7 +2,7 @@
 
 <!-- Justin Rasnic
 	 MIU 1209
-	 Project 1
+	 Project 3
 	 index.html -->
 
 <html>
@@ -18,7 +18,8 @@
 	<title>Game Rating Library</title>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
 	<link href="css/styles.css" rel="stylesheet" type="text/css" />	
-	<script type="text/javascript" src="js/lib/modernizr.custom.89414"></script>
+	<script src="js/libs/modernizr.custom.89414.js"></script>
+
 </head>
 <body>
 	<div data-role="page" id="homepage">
@@ -391,12 +392,12 @@
 
 				<div data-role="fieldcontain">
 					<label for="gname">Game Name:</label>
-					<input type="text" name="gname" id="gname" />
+					<input type="text" name="gname" id="gname" class="required" />
 				</div>
 
 				<div data-role="fieldcontain">
 					<label for="genre">Genre:</label>
-					<select name="genre"id="genre" data-native-menu="false">
+					<select name="genre"id="genre" data-native-menu="true"  class="required" />
 						<option data-placeholder="true">--Choose a Genre--</option>
 						<option value="Action-Adventure">Action-Adventure</option>
 						<option value="Fighting">Fighting</option>
@@ -418,7 +419,7 @@
 				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup">
 						<legend>What platform(s) is the game on?</legend>
-						<input type="checkbox" value="Playstation 3" name="platforms" id="ps3" />
+						<input type="checkbox" value="Playstation 3" name="platforms" id="ps3" class="required" />
 						<label for="ps3">Playstation 3</label>
 						<input type="checkbox" value="Xbox 360" name="platforms" id="xbox360" />
 						<label for="xbox360">Xbox 360</label>
@@ -441,9 +442,9 @@
 				</div>
 
 				<div data-role="fieldcontain">
-					<fieldset data-role="controlgroup">
+					<fieldset data-role="controlgroup" class="required">
 						<legend>Your recommendation:</legend>
-						<input type="radio" value="Buy" name="recommendation" id="buy" />
+						<input type="radio" value="Buy" name="recommendation" id="buy" class="required"/>
 						<label for="buy">Buy</label>
 						<input type="radio" value="Rent/Borrow" name="recommendation" id="rent" />
 						<label for="rent">Rent/Borrow</label>
@@ -464,8 +465,16 @@
 			</form>
 		</div>
 	</div>
+
+	<div data-role="dialogue" id="errors">
+		<div data-role="header" data-position="fixed">
+			<h1>Errors</h1>
+		</div>
+	</div>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-<script type="text/javascript" src="js/libs/jquery.validate.min"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/Sample-main.js"></script>
+
 </body>
 </html>

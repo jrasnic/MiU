@@ -2,7 +2,7 @@ $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 });	
 		
-$('#addItem').on('pageinit', function(){
+$('#additem').on('pageinit', function(){
 
 		var myForm = $('#mainform');
 		    myForm.validate({
@@ -29,6 +29,7 @@ var getData = function(){
 };
 
 var storeData = function(data){
+	console.log(data);
 	
 }; 
 
