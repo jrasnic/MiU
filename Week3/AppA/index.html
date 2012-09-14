@@ -390,14 +390,16 @@
 		<div data-role="content">
 			<form action="" method="post" id="mainform">
 
+				<p>* denotes a required field</p>
+
 				<div data-role="fieldcontain">
-					<label for="gname">Game Name:</label>
+					<label for="gname">*Game Name:</label>
 					<input type="text" name="gname" id="gname" class="required" />
 				</div>
 
 				<div data-role="fieldcontain">
 					<label for="genre">Genre:</label>
-					<select name="genre"id="genre" data-native-menu="false" class="required" />
+					<select name="genre" id="genre" data-native-menu="false"  /> <!-- problem with plugin, not making this field required -->
 						<option data-placeholder="true">--Choose a Genre--</option>
 						<option value="Action-Adventure">Action-Adventure</option>
 						<option value="Fighting">Fighting</option>
@@ -412,13 +414,13 @@
 				</div>
 
 				<div data-role="fieldcontain">
-					<label for="releasedate">Release Date:</label>
+					<label for="releasedate">*Release Date:</label>
 					<input type="date" name="releasedate" id="releasedate" class="required" />
 				</div>
 
 				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup">
-						<legend>What platform(s) is the game on?</legend>
+						<legend>*What platform(s) is the game on?</legend>
 						<input type="checkbox" value="Playstation 3" name="platforms" id="platforms-ps3" class="required" />
 						<label for="platforms-ps3">Playstation 3</label>
 						<input type="checkbox" value="Xbox 360" name="platforms" id="platforms-xbox360" />
@@ -443,7 +445,7 @@
 
 				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup" class="required">
-						<legend>Your recommendation:</legend>
+						<legend>*Your recommendation:</legend>
 						<input type="radio" value="Buy" name="recommendation" id="recommendation-buy" class="required"/>
 						<label for="recommendation-buy">Buy</label>
 						<input type="radio" value="Rent/Borrow" name="recommendation" id="recommendation-rent" />
@@ -466,6 +468,17 @@
 				<a href="#errors" id="errorslink" data-rel="dialog">Open errors</a>
 
 			</form>
+		</div>
+
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-ajax="false" data-icon="home">Home</a></li>
+					<li><a href="#additem" data-icon="plus">Add Game</a></li>
+					<li><a href="../AppB/index.html" data-ajax="false" data-icon="refresh">App B</a></li>
+					<li><a href="http://jrasnic.github.com/MiU/Week3/AppA/" data-ajax="false" data-icon="check">gh Pages</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 

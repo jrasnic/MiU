@@ -39,10 +39,10 @@
 				<li><label for="gname">*Game Name:</label></br><input type="text" id="gname" /></li>
 				<li id="select"><label for="genre">*Genre:</label></br>
 				</li>
-				<li><label for="releasedate">Release Date:</label></br><input type="date" id="releasedate" /></li>
+				<li><label for="releasedate">Release Date:</label></br><input type="date" id="releasedate" value="default" /></li>
 				<li>What platform is the game on?
 					<ul id="platforms">
-						<li><input type="checkbox" value=" Playstation 3" id="ps3" name="platforms" /><label for="ps3">Playstation 3</label></li>
+						<li><input type="checkbox" value=" Playstation 3" id="ps3" name="platforms" checked="checked" /><label for="ps3">Playstation 3</label></li>
 						<li><input type="checkbox" value=" Xbox 360" id="xbox" name="platforms" /><label for="xbox">Xbox 360</label></li>
 						<li><input type="checkbox" value=" Nintendo Wii" id="wii" name="platforms" /><label for="wii">Nintendo Wii</label></li>
 						<li><input type="checkbox" value=" Windows" id="windows" name="platforms" /><label for="windows">Windows</label></li>
@@ -54,7 +54,7 @@
 				<li><label for="quality" id="qualitylabel">How would you rate the quality of this game?</label></br><input type="range" id="quality" /></li>
 				<li>Recommendation:
 					<ul id="radios">
-						<li><input type="radio" value="Buy" id="buy" name="recommendation" /><label for="own">Buy</label></li>
+						<li><input type="radio" value="Buy" id="buy" name="recommendation" checked="checked" /><label for="own">Buy</label></li>
 						<li><input type="radio" value="Rent/Borrow" id="rent" name="recommendation" /><label for="wouldbuy">Rent/Borrow</label></li>
 						<li><input type="radio" value="Skip" id="skip" name="recommendation" /><label for="nowant">Skip</label></li>
 					</ul>
