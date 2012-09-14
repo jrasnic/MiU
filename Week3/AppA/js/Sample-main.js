@@ -27,7 +27,9 @@ $('#additem').on('pageinit', function(){
 			},
 			submitHandler: function() {
 		var data = myForm.serializeArray();
+			console.log(data);
 			storeData(data);
+
 		}
 	});
 	
@@ -37,12 +39,32 @@ $('#additem').on('pageinit', function(){
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
+var platformValues = [];
+var j;
+
 var autofillData = function (){
 	 
 };
 
 var getData = function(){
 
+};
+
+// get Element shortcut
+function ge(x){
+	var element = document.getElementById(x);
+	return element;
+};
+
+// get checkbox values
+function getPlatformValues(){                      
+	var checkboxes = ge("mainform").platforms;
+	for(i=0, j=checkboxes.length; i<j; i++){
+		if(checkboxes[i].checked){
+			var checkedValue = checkboxes[i].value;
+			platformValues.push(checkedValue);
+		};
+	};
 };
 
 var storeData = function(data){
@@ -52,29 +74,35 @@ var storeData = function(data){
 	var id = Math.floor(Math.random()*10000001);
 		
 		
-	//getPlatformValues();
+	getPlatformValues();
 	//getRecommendationValue();
 	var item = [];
 	for(var key in data){
 		var itemName = data[key].name;
-		var itemValue = data[key].value;
+		var itemValue = data[key].value;		
+		var checkboxValues = [];
 		var label = $('label[for^="'+ itemName +'"]').not('[generated]');
 		var legend = label.closest('fieldset').find('.ui-controlgroup-label');
 		var fieldname = legend.length ? legend.text() : label.text();
-		item[key] = [fieldname, itemValue];
-		
-		
-	};
+		if(itemName === "platforms"){						
+			if(itemName != data[key-1].name){
+				item[key] = [fieldname, platformValues];
+				var placeholder = key;
+				placeholder++;
+				var remove = platformValues.length - 1;
+			}
 
-	// 	item.gname = ["Game Name: ", data[0].value];
-	// 	item.genre = ["Genre: ", data[1].value];
-	// 	item.releaseDate = ["Release Date: ", data[2].value];
-	// 	item.platforms = ["Platforms:", data[3].value];
-	// 	item.quality = ["Quality: ", data[4].value];
-	// 	item.recommendation = ["Recommendation: ", data[5].value];
-	// 	item.notes = ["Notes: ", data[6].value];
+		} else{
+			item[key] = [fieldname, itemValue];
+		}
+		console.log(key);
+	};
+	
+	item.splice(placeholder,remove);
 	localStorage.setItem(id, JSON.stringify(item));
 	alert("Rating Saved!");	
+	console.log(placeholder);
+	console.log(remove);
 	console.log(localStorage);
 }; 
 
