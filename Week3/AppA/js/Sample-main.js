@@ -4,9 +4,25 @@ $('#home').on('pageinit', function(){
 		
 $('#additem').on('pageinit', function(){
 
-		var myForm = $('#mainform');
+	delete $.validator.methods.date;
+
+		var myForm = $('#mainform'),
+			errorslink = $('#errorslink')
+			;
+
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
+				errorslink.click();
+				console.log(validator.submitted);
+				var html = '';
+				for(var key in validator.submitted){
+					var label = $('label[for^="'+ key +'"]').not('[generated]');
+					console.log(label.text());
+					var legend = label.closest('fieldset').find('.ui-controlgroup-label');
+					var fieldname = legend.length ? legend.text() : label.text();
+					html += '<li>' + fieldname +'</li>';
+				};
+				$("#errors ul").html(html);
 			},
 			submitHandler: function() {
 		var data = myForm.serializeArray();

@@ -3,6 +3,10 @@ MIU 1209
 Project 3
 CSS styles*/
 
+#errorslink{
+	display:none;
+}
+
 label.error{
 	display: block;
 	margin: 10px 0px;

@@ -397,7 +397,7 @@
 
 				<div data-role="fieldcontain">
 					<label for="genre">Genre:</label>
-					<select name="genre"id="genre" data-native-menu="true"  class="required" />
+					<select name="genre"id="genre" data-native-menu="false" class="required" />
 						<option data-placeholder="true">--Choose a Genre--</option>
 						<option value="Action-Adventure">Action-Adventure</option>
 						<option value="Fighting">Fighting</option>
@@ -413,26 +413,26 @@
 
 				<div data-role="fieldcontain">
 					<label for="releasedate">Release Date:</label>
-					<input type="date" name="releasedate" id="releasedate" />
+					<input type="date" name="releasedate" id="releasedate" class="required" />
 				</div>
 
 				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup">
 						<legend>What platform(s) is the game on?</legend>
-						<input type="checkbox" value="Playstation 3" name="platforms" id="ps3" class="required" />
-						<label for="ps3">Playstation 3</label>
-						<input type="checkbox" value="Xbox 360" name="platforms" id="xbox360" />
-						<label for="xbox360">Xbox 360</label>
-						<input type="checkbox" value="Nintendow Wii" name="platforms" id="wii" />
-						<label for="wii">Nintendo Wii</label>
-						<input type="checkbox" value="Windows" name="platforms" id="windows" />
-						<label for="windows">Windows</label>
-						<input type="checkbox" value="Mac" name="platforms" id="mac" />
-						<label for="mac">Mac</label>
-						<input type="checkbox" value="iOS" name="platforms" id="ios" />
-						<label for="ios">iOS</label>
-						<input type="checkbox" value="Android" name="platforms" id="android" />
-						<label for="android">Android</label>
+						<input type="checkbox" value="Playstation 3" name="platforms" id="platforms-ps3" class="required" />
+						<label for="platforms-ps3">Playstation 3</label>
+						<input type="checkbox" value="Xbox 360" name="platforms" id="platforms-xbox360" />
+						<label for="platforms-xbox360">Xbox 360</label>
+						<input type="checkbox" value="Nintendow Wii" name="platforms" id="platforms-wii" />
+						<label for="platforms-wii">Nintendo Wii</label>
+						<input type="checkbox" value="Windows" name="platforms" id="platforms-windows" />
+						<label for="platforms-windows">Windows</label>
+						<input type="checkbox" value="Mac" name="platforms" id="platforms-mac" />
+						<label for="platforms-mac">Mac</label>
+						<input type="checkbox" value="iOS" name="platforms" id="platforms-ios" />
+						<label for="platforms-ios">iOS</label>
+						<input type="checkbox" value="Android" name="platforms" id="platforms-android" />
+						<label for="platforms-android">Android</label>
 					</fieldset>
 				</div>
 
@@ -444,12 +444,12 @@
 				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup" class="required">
 						<legend>Your recommendation:</legend>
-						<input type="radio" value="Buy" name="recommendation" id="buy" class="required"/>
-						<label for="buy">Buy</label>
-						<input type="radio" value="Rent/Borrow" name="recommendation" id="rent" />
-						<label for="rent">Rent/Borrow</label>
-						<input type="radio" value="Skip" name="recommendation" id="skip" />
-						<label for="skip">Skip</label>
+						<input type="radio" value="Buy" name="recommendation" id="recommendation-buy" class="required"/>
+						<label for="recommendation-buy">Buy</label>
+						<input type="radio" value="Rent/Borrow" name="recommendation" id="recommendation-rent" />
+						<label for="recommendation-rent">Rent/Borrow</label>
+						<input type="radio" value="Skip" name="recommendation" id="recommendation-skip" />
+						<label for="recommendation-skip">Skip</label>
 					</fieldset>
 				</div>
 				
@@ -462,13 +462,22 @@
 					<input type="submit" value="Add Game" data-theme="b" /></br>
 					<input type="reset" value="Reset" data-theme="a" />
 				</div>
+
+				<a href="#errors" id="errorslink" data-rel="dialog">Open errors</a>
+
 			</form>
 		</div>
 	</div>
 
 	<div data-role="dialogue" id="errors">
 		<div data-role="header" data-position="fixed">
-			<h1>Errors</h1>
+			<h1>Missing Fields</h1>
+		</div>
+
+		<div data-role="content">
+			<ul>
+				<li>test</li>
+			</ul>
 		</div>
 	</div>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
