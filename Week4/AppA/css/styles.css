@@ -85,7 +85,7 @@ body{
 } 
 
 .ui-page{
-	background: #F3F7FB;
+	background: #BBC2CE;
 }
 
 li{
@@ -111,19 +111,20 @@ li{
 #logo{
 	margin-top: -10px;
 	margin-bottom: -20px;
+	margin-left: -15px;
 }
 
 .small-logo{
 	margin-top: 10px;
-	margin-left: 80px;
+	/*margin-left: 80px;*/
 }
 
-#homeheader{
+/*#homeheader{
 	margin-left: 20px;
-}
+}*/
 
 .ui-header{
-	text-align: left;
+	text-align: center;
 }
 
 /*div{
