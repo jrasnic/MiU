@@ -14,6 +14,7 @@ label.error{
 }
 
 p{
+	margin-top: 0px;
 	text-align: center;
 }
 
@@ -46,10 +47,10 @@ h1{
 
 body{
 	font-family: Eurostile, Arial, sans-serif;
-	/*color: #000;
-	background-color: #9FABAD;*/
-	
-	/*height: 850px;*/
+}
+
+.ui-page{
+	background: #F3F7FB;
 }
 
 li{
@@ -59,7 +60,36 @@ li{
 	margin-left: -10px;
 }
 
+#homepage{
+	text-align: center;
+}
 
+#fgame{
+	margin-top: 0px;
+	text-align: left;
+}
+
+#featurespace{
+	margin-bottom: 30px;
+}
+
+#logo{
+	margin-top: -10px;
+	margin-bottom: -20px;
+}
+
+.small-logo{
+	margin-top: 10px;
+	margin-left: 80px;
+}
+
+#homeheader{
+	margin-left: 20px;
+}
+
+.ui-header{
+	text-align: left;
+}
 
 /*div{
 	margin-top: 0px;
