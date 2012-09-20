@@ -1,3 +1,8 @@
+// Justin Rasnic
+// MiU 1209
+// Project 4 Gold App
+// Main JS using ASD template
+
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 });	
@@ -26,12 +31,11 @@ $('#additem').on('pageinit', function(){
 				window.scrollTo(0,50);
 			},
 			submitHandler: function() {
-		var data = myForm.serializeArray();
+			var data = myForm.serializeArray();
 			console.log(data);
 			storeData(data);
-
-		}
-	});
+			}
+		});
 	
 	//any other code needed for addItem page goes here
 	

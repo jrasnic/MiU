@@ -1,6 +1,7 @@
 // Justin Rasnic
 // MIU 1209
-// Project 1
+// Project 4
+// Main JS for bronze app; old template from VFW, functioning CRUD
 
 // Delay JS until DOM is ready (all code must be inside this function)
 window.addEventListener("DOMContentLoaded", function(){
