@@ -1,0 +1,231 @@
+/* Justin Rasnic
+MIU 1209
+Project 3
+CSS styles*/
+
+#errorslink{
+	display:none;
+}
+
+label.error{
+	display: block;
+	margin: 10px 0px;
+	color: red;
+}
+
+p{
+	text-align: center;
+}
+
+#homepage .ui-grid-b div{
+	text-align: center;
+}
+
+
+/*li.browse{
+	height: 60px;
+}
+*/
+h1{
+	font-family: Eurostile, Arial Black, Arial, sans-serif;
+	/*font-size: 32px;
+	color: #F3F7FB;
+	text-align: center;
+	padding-bottom: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;*/
+}
+
+/*h2{
+	color: #234A70;
+	text-align: left;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}*/
+
+body{
+	font-family: Eurostile, Arial, sans-serif;
+	/*color: #000;
+	background-color: #9FABAD;*/
+	
+	/*height: 850px;*/
+}
+
+li{
+	margin-bottom: 3px;
+	text-align: left;
+	list-style: none;
+	margin-left: -10px;
+}
+
+
+
+/*div{
+	margin-top: 0px;
+}*/
+
+section{
+	text-align: center;
+	margin-top: 0px;
+}
+
+/*fieldset{
+	border: none;
+}*/
+
+/*legend{
+	color: #234A70;
+	font-size: 20px;
+	text-align: left;
+	font-weight: bold;
+}*/
+
+/*label{
+	font-size: 14px;
+}*/
+
+/*nav{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+a:link{
+text-decoration: none;
+color: #185EB4;
+}
+
+a:visited{
+	color: #185EB4;
+
+}
+
+a:hover{
+	font-size: 18px;
+	color: maroon;
+}*/
+
+/*a:active{
+	color: red;
+
+}
+
+nav a{
+	margin-right: 10px;
+	margin-left: 10px;
+	
+}
+a{
+	margin-right: 10px;
+}
+*/
+
+
+/*#home{
+	color: #F3F7FB;
+}
+
+#items + #items{
+	display: none;
+}
+
+#errors{
+	color: red;
+}
+
+#required{
+	font-size: 14px;
+	text-align: left;
+}
+
+#displaylist{
+	margin-top: 25px;
+	margin-left: -15px;
+	list-style-type: none;
+	list-style-position: outside;
+}
+
+#ps3{
+	margin-top: 5px;
+}
+
+#buy{
+	margin-top: 5px;
+}
+
+#quality{
+	margin-top: 5px;
+	width: 250px;
+}
+
+#platforms{
+	margin-left: 30px;
+}
+
+#radios{
+	margin-left: 30px;
+}*/
+
+#cta{
+	/*border-radius: 10px;
+	width: 300px;
+	background-color: #F3F7FB;
+	margin-top: 10px;
+	margin-bottom: 10px;*/
+	text-decoration: none;
+	font-family: Eurostile, Arial Black, Arial, sans-serif;
+	/*font-weight: bold;
+	font-size: 28px;
+	color: #185EB4;*/
+}
+
+#cta:visited{
+	text-decoration: none;
+	font-family: Eurostile, Arial Black, Arial, sans-serif;
+	/*font-weight: bold;
+	font-size: 28px;
+	color: #185EB4;*/
+}
+
+/*#cta:hover{
+	color: maroon;
+	}
+
+#cta:active{
+	color: navy;
+	font-size: 28px;
+}*/
+
+/*#gname{
+	width: 250px;
+}
+
+#genre{
+	width: 260px;
+}
+
+#releasedate{
+	width: 250px;
+}
+
+#notes{
+	width: 250px;
+	height: 60px;
+	resize: none;
+}*/
+/*
+#qualitylabel{
+	font-size: 16px;
+}*/
+
+/*#hiddeninput{
+	display: none;
+}*/
+
+#submit{
+	/*width: 200px;
+	font-size: 16px;*/
+	font-family: Eurostile, Arial, sans-serif;
+	/*position: absolute;
+	left: 60px;*/
+}
