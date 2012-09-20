@@ -3,6 +3,10 @@ MIU 1209
 Project 1
 CSS styles*/
 
+.ui-page{
+	background: black;
+}
+
 p{
 	text-align: center;
 }
